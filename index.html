@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+    </style>
+    <title>Document</title>
+</head>
+<!--Dessa maneira o menu vai seguir aonde o usuário esta, vai ficar marcando a página-->
+
+<body data-bs-spy="scroll" data-bs-target="#menu">
+    <div class="container">
+        <header id="header" class="ola sticky-top d-flex flex-wrap justify-content-center py-3 mb-5 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-warning text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <!--O fw-bold é para deixar em negrito-->
+                <span style="text-shadow: 1px 1px 1px black;" class="fs-4 fw-bold"><img src="img/barba.png"
+                        width="25px"> Os Barbas</span>
+            </a>
+
+            <ul id="menu" class="nav nav-pills">
+                <!--Esse é o comando para deixar o site com o tema dark, ele funciona por meio do javascript, q esta referenciado la embaixo, tive q mexer em algumas coisas no documento do js, para quando ele for para o tema dark, aparecer o icone da lua e quando for o light aparecer o do sol-->
+                <div class="form-check form-switch ms-auto mt-2 me-3">
+                    <!--Esse ID, foi o qual eu usei para fazer o comando de troca de icone no JS-->
+                    <label id="icone" class="form-check-label m-0 m-auto" for="lightSwitch">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-moon m-0 p-0 viewBox=" 0 0 16 16">
+                            <path
+                                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+                        </svg>
+                    </label>
+                    <input class="form-check-input" type="checkbox" id="lightSwitch" />
+                </div>
+                <li style="text-shadow: 1px 1px 1px black;" class="nav-item "><a href="#subir"
+                        class="nav-link active link-warning" aria-current="page">Casa</a></li>
+                <li style="text-shadow: 1px 1px 1px black;" class="nav-item "><a href="#produtos"
+                        class="nav-link link-warning">Produtos</a>
+                </li>
+                <li style="text-shadow: 1px 1px 1px black;" class="nav-item"><a href="#valor"
+                        class="nav-link link-warning">Valores</a></li>
+                <li style="text-shadow: 1px 1px 1px black;" class="nav-item"><a href="#perguntas"
+                        class="nav-link link-warning">Pergunte</a></li>
+                <li style="text-shadow: 1px 1px 1px black;" class="nav-item"><a href="#contato"
+                        class="nav-link link-warning">conheça</a></li>
+            </ul>
+        </header>
+        <section class="opa" id="subir">
+            <div class="row">
+                <!--com esse text-md-start, quer dizer que a partir de telas médias, o texto vai ficar a esquerda-->
+                <div class="col-md-6 mt-5 p-3 text-center text-md-start">
+                    <h2 class="fs-5 mt-3">Vamos mostrar que temos Barba!</h2>
+                    <h1 class="display-2 fw-bold mt-4">Venha ter barba com a gente</h1>
+                    <p class="text-muted mt-4">Com o nosso projeto que esta em desenvolvimento, vai ser possível
+                        qualquer
+                        pessoa ter barba, em
+                        menos de 10 minutos crecerá, e vc será como um VIKING!</p>
+                </div>
+                <div class="col-md-6">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <!--Eu encontrei essa animação no site lottie player acho, e colocando essa clase m-0 e m-auto, ele fica centralizado, com esse float-md-end, quer dizer q apartir de telas medias ele vai ficar no centro a direita-->
+                    <lottie-player class="m-0 m-auto float-md-end"
+                        src="https://assets9.lottiefiles.com/private_files/lf30_94lp3dc8.json" background="transparent"
+                        speed="1" style="max-width: 100%;" loop autoplay></lottie-player>
+                </div>
+            </div>
+        </section>
+        <!--O my é para ele da uma margem e um padding, tanto para cima como para baixo-->
+        <section class="my-5 py-5 text-center" id="produtos">
+            <div class="row">
+                <div class="col-12 mb-5 pb-5">
+                    <h2 class="display-5 fw-bold mt-5">Se ligue nos produtos magnificos</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 my-4">
+                    <!--O shadow é aquele 3d, o padding é para aumentar a área do circulo-->
+                    <img src="img/creme-de-barbear.png" class="border rounded-circle shadow mb-3 p-4">
+                    <h2 class="fw-normal">Cremes</h2>
+                    <p>Isso ai meu amigo, chegou o momento de virar um verdadeiro <b>HOMEM</b>, chega de mimi e use o
+                        creme
+                        <i>milagroso</i>!
+                    </p>
+                    <p><a class="btn btn-secondary" href="#">Aperte agora!</a></p>
+                </div>
+                <div class="col-lg-4 my-4">
+                    <img src="img/barbearia.png" class="border rounded-circle shadow mb-3 p-4">
+                    <h2 class="fw-normal">Periféricos</h2>
+                    <p>Exatamente meu amigo ser humano, a gente também vende tesouras e outras coisas de barbeiros,
+                        achou
+                        oq? quem pode <mark>PODE</mark></p>
+                    <p><a class="btn btn-secondary" href="#">Agora!</a></p>
+                </div>
+                <div class="col-lg-4 my-4">
+                    <img src="img/barbeiro.png" class="border rounded-circle shadow mb-3 p-4">
+                    <h2 class="fw-normal">Contrate-nos</h2>
+                    <p>A[Vamos amigo, contrate a gente logo, essa sua barba esta muito feia! Então é agora o
+                        <u>Momento!</u>
+                        Arrisque mas n petisque.
+                    </p>
+                    <p><a class="btn btn-secondary" href="#">Sem Enrolação</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="valor">
+            <div class="pricing-header mt-5 p-5 mx-auto text-center">
+                <h1 class="display-5 fw-bold mt-5">Valores</h1>
+                <p class="fs-5 s">Tudo aqui é bobagem de tão <i><b>Barato</b></i>, então estou tranquilo porque
+                    quando você ver os preços vai <span class="text-danger fs-5 fw-bold">PIRAR</span>, então prepare o
+                    seu corações bom <span style="text-shadow: 1px 1px 1px red;"
+                        class="fs-5 text-warning shadow p-2">HOMEM!</span>
+                </p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col-md-12 col-lg-4">
+                    <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                        <div class="card-header py-3 text-bg-warning border-warning">
+                            <h4 class="my-0 fw-bold text-success">Valor</h4>
+                        </div>
+                        <!--Eu coloquei o bg-light, por causa do tema escura, quando o darkmode pé ativado, ele subistitui tudo com o -light, para dark, então quando entrar no tema escuro, o background do card vai ficar dark, e as cores das fontes vão aparecer, pq antes nem tinha bg-->
+                        <div class="card-body bg-light border border-warning">
+                            <h2 class="card-title pricing-card-title">R$50.000<small class="fw-light">/Grana</small>
+                            </h2>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Cortar a barba</li>
+                                <li>Lavar a barba</li>
+                                <li>Conersar enquanto corta a barba</li>
+                                <li>Vc vai pagar</li>
+                            </ul>
+                            <button type="button" style="color: rgb(167, 110, 5);"
+                                class="w-100 btn btn-lg btn-warning fw-bold">Pague
+                                agora!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                        <div class="card-header py-3 text-bg-warning border-warning">
+                            <h4 class="my-0 fw-bold text-success">Valor</h4>
+                        </div>
+                        <div class="card-body bg-light border border-warning">
+                            <h2 class="card-title pricing-card-title">R$55.000<small class="fw-light">/Grana</small>
+                            </h2>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Cortar a barba</li>
+                                <li>Lavar a barba</li>
+                                <li>Conersar enquanto corta a barba</li>
+                                <li>Tem direito a ir no banheiro</li>
+                            </ul>
+                            <button type="button" style="color: rgb(167, 110, 5);"
+                                class="w-100 btn btn-lg btn-warning fw-bold">Pague
+                                agora!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                        <div class="card-header py-3 text-bg-warning border-warning">
+                            <h4 class="my-0 fw-bold text-success">Valor</h4>
+                        </div>
+                        <div class="card-body bg-light border border-warning">
+                            <h2 class="card-title pricing-card-title">R$65.000<small class="fw-light">/Grana</small>
+                            </h2>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Vai poder sentar no sofa enquanto espera</li>
+                                <li>Cortar a barba</li>
+                                <li>Lavar a barba</li>
+                                <li>Tem direito a ir no banheiro</li>
+                            </ul>
+                            <button type="button" style="color: rgb(167, 110, 5);"
+                                class="w-100 btn btn-lg btn-warning fw-bold">Pague
+                                agora!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="perguntas" class="text-center my-5 py-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="display-5 mt-5 fw-bold">Perguntas meu consagrado!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <div class="accordion " id="accordionExample">
+                        <div style="background-color: rgb(253, 194, 31);" class="accordion-item">
+                            <h2 class="accordion-header " id="headingOne">
+                                <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <p><b>Vcs usam creme de barbear?</b></p>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <b>CLARO NÉ, MEU DEUS!</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="background-color: rgb(253, 194, 31);">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed bg-warning" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    <p><b>Vcs cortam a barba?</b></p>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <b>Quem ta escolhendo essas perguntas...</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="background-color: rgb(253, 194, 31);">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed bg-warning" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    <p><b>Vcs pensam em cobrar o serviço de vcs?</b></p>>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <b>Sinceramente, oq vc ta fazendo aqui?</b>>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="background-color: rgb(253, 194, 31);">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed bg-warning" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    <p><b>Pq vcs fazem isso?</b></p>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <b>Pq a gente quer!</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="my-5 py-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 mt-5 fw-bold mb-5">Fale com a gente!</h2>
+                </div>
+            </div>
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6 text-center">
+                    <div style="background-color: chocolate;" class="h-100 p-5 text-dark rounded-3">
+                        <h2>Esses são os contatos</h2>
+                        <p class="mt-3"><img src="img/telefone.png"> (92) Não ligue</p>
+                        <p><img src="img/o-email.png"> naoenvieemail@naoenvie.com</p>
+                        <button class="btn bg-success w-75 p-1" type="button"><img src="img/whatsapp.png">
+                            <span class="fs-5 text-white">Sem
+                                mensagens </span></button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="h-100 p-5 text-bg-warning rounded-3">
+                        <h2>Endereço</h2>
+                        <p class="mt-3">Achou mesmo q eu ia falar? <b>NÃO VENHA</b></p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7961.70979195823!2d-38.396625977607044!3d-3.841310284059395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c75c582de0f9ab%3A0xa8a00967552761be!2sBeach%20Park!5e0!3m2!1spt-BR!2sbr!4v1678997449798!5m2!1spt-BR!2sbr"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <button class="btn bg-danger w-75 text-white" type="button">Pare de clicar!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center pt-5 mt-5 pb-3 border-top">
+            <span class="fw-bold"><img src="img/barba.png" width="16px"> Os
+                Barbas</span>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-md-6 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Minha casa</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Produtos(UAU)</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Valor né</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pergunte</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contate</a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="js/switch.js"></script>
+</body>
+
+</html>

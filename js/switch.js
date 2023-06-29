@@ -1,6 +1,4 @@
-/**
- *  Light Switch @version v0.1.4
- */
+
 icone = document.getElementById('icone');
 
 (function () {
@@ -9,11 +7,6 @@ icone = document.getElementById('icone');
     return;
   }
 
-  /**
-   * @function darkmode
-   * @summary: changes the theme to 'dark mode' and save settings to local stroage.
-   * Basically, replaces/toggles every CSS class that has '-light' class with '-dark'
-   */
   function darkMode() {
     document.querySelectorAll('.bg-light').forEach((element) => {
       element.className = element.className.replace(/-light/g, '-dark');
